@@ -1,0 +1,6 @@
+1) Способы передачи данных: WebSocket, WebAPI
+2) Утилиты: Docker, RabbitMQ, Kubernates
+3) Архитектура: микросервис
+4) Паттерны: REST API (CRUD), ООП, SOLID, EventBus, Entity Framework, Migrations, LinQ, 
+5) БД: MS SQL server, PostrgeSql
+6) Другое: Nginx, контуры Prod и Dev, пространство окружения (env) 
