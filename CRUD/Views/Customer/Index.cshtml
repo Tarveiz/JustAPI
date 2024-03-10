@@ -1,1 +1,35 @@
-﻿<h1>Customer List</h1>
+﻿@model List<Customer>
+
+
+
+<div class="row">
+    <div class="col">
+        <h1>Список покупателей</h1>
+    </div>
+
+    <div class="col">
+        <a asp-action="Create" class="btn btn-primary">Создать нового покупателя</a>
+    </div>
+</div>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Электронная почта</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.OrderBy(x => x.Id).Reverse())
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@item.Email</td>
+            </tr>
+        }
+    </tbody>
+</table>
