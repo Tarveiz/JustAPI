@@ -1,6 +1,7 @@
 ﻿@model List<Customer>
 
 
+<partial name="_NotificationPartial"/>
 
 <div class="row">
     <div class="col">
@@ -29,6 +30,10 @@
                 <td>@item.FirstName</td>
                 <td>@item.LastName</td>
                 <td>@item.Email</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-dark">Изменить</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Удалить</a>
+                </td>
             </tr>
         }
     </tbody>
